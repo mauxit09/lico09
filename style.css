@@ -1,0 +1,166 @@
+/*
+ * Reset Básico e Fontes
+ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f7f9;
+    color: #333;
+}
+
+/*
+ * Estilos do Cabeçalho
+ */
+header {
+    background-color: #007bff; /* Azul primário */
+    color: white;
+    padding: 20px 40px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+/*
+ * Layout Principal (Flexbox)
+ */
+.container {
+    display: flex;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+/*
+ * Barra Lateral (Sidebar) - Menu de Navegação
+ */
+.sidebar {
+    width: 280px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    flex-shrink: 0; /* Impede que a sidebar encolha */
+    height: fit-content; /* Ajusta a altura ao conteúdo */
+    position: sticky; /* Mantém o menu visível ao rolar */
+    top: 20px;
+}
+
+.sidebar h2 {
+    color: #007bff;
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 5px;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar li {
+    margin-bottom: 10px;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: #555;
+    font-weight: 400;
+    display: block;
+    padding: 5px 0;
+    transition: color 0.3s, padding-left 0.3s;
+    border-left: 3px solid transparent;
+}
+
+.sidebar a:hover,
+.sidebar a:focus {
+    color: #007bff;
+    padding-left: 10px;
+    border-left: 3px solid #007bff;
+}
+
+/*
+ * Conteúdo Principal (Main Content)
+ */
+.content {
+    flex-grow: 1; /* Ocupa o espaço restante */
+    padding-left: 40px;
+}
+
+.redacao-item {
+    background-color: #ffffff;
+    padding: 30px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.redacao-titulo {
+    color: #333;
+    font-size: 2em;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.redacao-item p {
+    margin-bottom: 15px;
+    text-align: justify;
+    font-size: 1.05em;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-color: #ddd;
+    margin: 30px 0;
+}
+
+/*
+ * Estilos do Rodapé
+ */
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    background-color: #333;
+    color: white;
+    font-size: 0.9em;
+}
+
+/*
+ * Media Queries para Responsividade
+ */
+@media (max-width: 900px) {
+    .container {
+        flex-direction: column;
+        padding: 0 10px;
+    }
+
+    .sidebar {
+        width: 100%;
+        margin-bottom: 20px;
+        position: static; /* Remove sticky em telas menores */
+    }
+
+    .content {
+        padding-left: 0;
+    }
+
+    .redacao-item {
+        padding: 20px;
+    }
+
+    .sidebar h2 {
+
+    }  
+}
